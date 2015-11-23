@@ -11,7 +11,7 @@
 
 // We can use the NSXML* interfaces on MacOS X only
 #ifndef UseAppleXML
-#  if defined(TARGET_OS_MAC)
+#  if !defined(TARGET_OS_IPHONE) && !defined(TARGET_IPHONE_SIMULATOR)
 #    define UseAppleXML 1
 #  else
 #    define UseAppleXML 0
